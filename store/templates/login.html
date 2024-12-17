@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{% block content %}
+
+
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-2 px-lg-3 my-2">
+            <div class="text-center text-white">
+            </br>
+                <p class="lead fw-normal text-white-50 mb-0">Login to your Sandesh Account</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <center>
+                <div class = "col-8">
+                            <div style="background: #ffffff; padding: 20px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px; text-align: center;">
+                                <h2 style="margin-bottom: 20px;">Login</h2>
+                                <form action="{% url 'login' %}" method="POST">
+
+                                    {% csrf_token%}
+
+                                
+                                    <label for="username" style="display: block; margin-bottom: 8px; font-weight: bold; text-align: left;">Username:</label>
+                                    <input type="text" id="email" name="username" required placeholder= "Enter your username"
+                                           style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+                                    
+                                    <label for="password" style="display: block; margin-bottom: 8px; font-weight: bold; text-align: left;">Password:</label>
+                                    <input type="password" id="password" name="password" required placeholder= "Enter your password"
+                                           style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+                                    
+                                    <button type="submit" 
+                                            style="width: 100%; padding: 10px; background: #007BFF; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">
+                                        Login
+                                    </button>
+                                </form>
+                            </div>
+        
+                          <br><br/>
+
+                          <br></br>
+                          <br></br>
+                          <br></br>
+                          <br></br>
+                     </div>
+            </center>
+
+    </div>
+
+{% endblock %}
